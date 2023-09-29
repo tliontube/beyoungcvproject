@@ -2,23 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1200px;
+}
+.Nav__Parent--width{
     background-color: black;
-    height: 30px;
+    display: flex;
+    justify-content: center;
 }
 .material-symbols-outlined{
     color: white;
+    font-size: 18px;
 }
-button{
+.nav__btn{
     border: none;
     background-color: black;
     color: white;
     margin-bottom: 2px;
+    cursor: pointer;
 }
 .Track__section{
     display: flex;
     align-items: center;
 }
 
-.span{
+span{
     color: white;
 }
