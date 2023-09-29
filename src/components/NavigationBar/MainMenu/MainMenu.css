@@ -7,6 +7,7 @@
     padding: 10px;
     justify-content: space-between;
     width: 1200px;
+    flex-wrap: wrap;
 }
 .Main__Menu--logoImage{
     height: 30px;
@@ -25,6 +26,7 @@
 .Main__Menu--center{
     display: flex;
     justify-content: center;
+    
 }
 .Main__Menu--btn{
     border: none;
