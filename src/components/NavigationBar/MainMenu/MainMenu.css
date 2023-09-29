@@ -20,6 +20,7 @@
     position: relative;
     margin-left:20px ;
     font-size: 1.4em;
+    cursor: pointer;
 }
 .Main__Menu--center{
     display: flex;
@@ -30,6 +31,7 @@
     background-color: white;
     cursor: pointer;
     padding: 10px;
+    margin: 0 auto;
 }
 .Main__Menu--btn:hover{
     background-color: yellow;
