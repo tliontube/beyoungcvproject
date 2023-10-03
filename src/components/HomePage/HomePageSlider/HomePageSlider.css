@@ -1,0 +1,34 @@
+.My__slide{
+    display: none;
+}
+.slide__img1,
+.slide__img2{
+    width: 100%;
+    cursor: pointer;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot:hover {
+    background-color: #717171;
+}
+#dark_dot{
+    background-color: black;
+}
+
