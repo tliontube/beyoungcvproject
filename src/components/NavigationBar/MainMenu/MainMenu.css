@@ -26,7 +26,6 @@
 .Main__Menu--center{
     display: flex;
     justify-content: center;
-
 }
 .Main__Menu--btn{
     border: none;
@@ -48,4 +47,18 @@
     position: sticky;
     top: 0;
     width: 100%;
+}
+/* search */
+.Main__Menu--ParentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Main__Menu--search{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    margin-top: 30px;
 }

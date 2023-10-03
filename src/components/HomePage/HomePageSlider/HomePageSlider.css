@@ -5,6 +5,8 @@
 .slide__img2{
     width: 100%;
     cursor: pointer;
+    position: relative;
+    z-index: -1;
 }
 .fade {
     animation-name: fade;
