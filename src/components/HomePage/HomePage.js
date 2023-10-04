@@ -2,17 +2,17 @@ import React from "react";
 import HomePageSlider from "./HomePageSlider/HomePageSlider";
 import HomePageAds from "./HomePageAds/HomePageAds";
 import ProductSlider from "../CommomComponents/ProductSlider/ProductSlider";
+import Footer from "./Footer/Footer";
 // import SavingSlider from "./BigSavingSwapper/BigSavingSwapper";
 function HomePage() {
 
   return (
-    <div>
-      
+    <div>  
       <HomePageSlider />
       <HomePageAds/>
       <ProductSlider/>
       <ProductSlider/>
-      <ProductSlider/>
+      <Footer/>
     </div>
   );
 }

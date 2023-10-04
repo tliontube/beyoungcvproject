@@ -26,7 +26,7 @@ function ProductSlider() {
     <div className="Carousel__Parent--div">
       <div className="Carousel__child--div">
       <h3 className="SavingZone__text">BIG SAVING ZONE</h3>
-        <Carousel className="Carousel" responsive={responsive}>
+        <Carousel className="Carousel" responsive={responsive} infinite={true}>
           <div className="Carousel__div">
             <a>
               <img

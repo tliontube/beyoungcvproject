@@ -23,6 +23,7 @@
     font-size: 1.4em;
     cursor: pointer;
 }
+
 .Main__Menu--center{
     display: flex;
     justify-content: center;
