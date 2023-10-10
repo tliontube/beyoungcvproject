@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import "./ProductSlider.css";
+import "./NewArrival.css";
 import "react-multi-carousel/lib/styles.css";
-function ProductSlider(props) {
+function ProductSliderNewArrival(props) {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -11,7 +11,7 @@ function ProductSlider(props) {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -23,38 +23,38 @@ function ProductSlider(props) {
     },
   };
   return (
-    <div className="Carousel__Parent--div">
-      <div className="Carousel__child--div">
+    <div className="NewArrival__Parent--div">
+      <div className="NewArrival__child--div">
         <h3 className="SavingZone__text">{props.title}</h3>
         <Carousel className="Carousel" responsive={responsive} infinite={true}>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img1} />
+              <img className="NewArrival__img" src={props.img1} />
             </a>
           </div>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img2} />
+              <img className="NewArrival__img" src={props.img2} />
             </a>
           </div>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img3} />
+              <img className="NewArrival__img" src={props.img3} />
             </a>
           </div>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img4} />
+              <img className="NewArrival__img" src={props.img4} />
             </a>
           </div>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img5} />
+              <img className="NewArrival__img" src={props.img5} />
             </a>
           </div>
-          <div className="Carousel__div">
+          <div className="NewArrival__div">
             <a>
-              <img className="Carousel__img" src={props.img6} />
+              <img className="NewArrival__img" src={props.img6} />
             </a>
           </div>
         </Carousel>
@@ -63,4 +63,4 @@ function ProductSlider(props) {
   );
 }
 
-export default ProductSlider;
+export default ProductSliderNewArrival;
