@@ -6,6 +6,9 @@ import Footer from "./Footer/Footer";
 import ProductSliderNewArrival from "../CommomComponents/ProductSlider/NewArrival/NewArrival";
 import CodPoster from "./CashOnDeliveryPoster/CodPoster";
 import LazyStrip from "./LazyStrip/LazyStrip";
+import CatagoriesForMan from "./CatagoriesForMan/CatagoriesForMan";
+import CatagoriesForWomen from "./CatagoriesForWomen/CatagoriesForWomen";
+import MainStrip from "./MainStrip/MainStrip";
 // import SavingSlider from "./BigSavingSwapper/BigSavingSwapper";
 function HomePage() {
   return (
@@ -31,6 +34,9 @@ function HomePage() {
         img6="https://www.beyoung.in/api/catalog/home-page-07-02-23/desktop/Active-wear-t-shirt-desktop.jpg"
       />
       <LazyStrip/>
+      <CatagoriesForMan/>
+      <CatagoriesForWomen/>
+      <MainStrip/>
       <CodPoster/>
       <Footer />
     </div>
