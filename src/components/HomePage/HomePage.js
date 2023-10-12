@@ -2,14 +2,14 @@ import React from "react";
 import HomePageSlider from "./HomePageSlider/HomePageSlider";
 import HomePageAds from "./HomePageAds/HomePageAds";
 import ProductSlider from "../CommomComponents/ProductSlider/ProductSlider";
-import Footer from "./Footer/Footer";
 import ProductSliderNewArrival from "../CommomComponents/ProductSlider/NewArrival/NewArrival";
 import CodPoster from "./CashOnDeliveryPoster/CodPoster";
 import LazyStrip from "./LazyStrip/LazyStrip";
 import CatagoriesForMan from "./CatagoriesForMan/CatagoriesForMan";
 import CatagoriesForWomen from "./CatagoriesForWomen/CatagoriesForWomen";
 import MainStrip from "./MainStrip/MainStrip";
-// import SavingSlider from "./BigSavingSwapper/BigSavingSwapper";
+
+
 function HomePage() {
   return (
     <div>
@@ -33,12 +33,11 @@ function HomePage() {
         img5="https://www.beyoung.in/api/catalog/home-page-07-02-23/desktop/Joggers-desktop-view1122.jpg"
         img6="https://www.beyoung.in/api/catalog/home-page-07-02-23/desktop/Active-wear-t-shirt-desktop.jpg"
       />
-      <LazyStrip/>
-      <CatagoriesForMan/>
-      <CatagoriesForWomen/>
-      <MainStrip/>
-      <CodPoster/>
-      <Footer />
+      <LazyStrip />
+      <CatagoriesForMan />
+      <CatagoriesForWomen />
+      <MainStrip />
+      <CodPoster />
     </div>
   );
 }

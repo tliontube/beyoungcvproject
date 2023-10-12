@@ -1,12 +1,17 @@
 import "../styles/App.css";
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./NavigationBar/Nav";
-import HomePage from "./HomePage/HomePage";
+import Footer from "../components/HomePage/Footer/Footer";
+import Search from "./NavigationBar/MainMenu/Search/search";
+// import SearchResult from "./HomePage/SearchResult/SearchResult";
+
 function App() {
-  return<div className="App">
-  <Nav/>
-  <HomePage/>
-  </div>;
+  return (
+    <div className="App">
+      <Nav />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

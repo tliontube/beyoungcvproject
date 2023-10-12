@@ -1,0 +1,32 @@
+
+.ManPage__Parent--section{
+    width: 100%;
+    /* border: 1px solid gold; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ManPage__Result--section{
+    /* width: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    
+}
+.ManPage--img__section{
+    width: 100%;
+}
+.ManPage__Content--section{
+    width: 300px;
+    border: 2px solid black;
+    cursor: pointer;
+    height: 550px;
+}
+.ManPage_Result--img{
+    width: 100%;
+}
+.Man__Price{
+    color: black;
+}
