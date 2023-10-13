@@ -11,7 +11,7 @@
 }
 .Reg__Log--Modal{
     width: 400px;
-    height: 500px;
+    height: 460px;
     background-color: white;
     border-radius: 10px;
 }
@@ -89,14 +89,5 @@
     color: gray;
 }
 .Reg__Log--Modal__info--Continueasguest:hover{
-    color: black;
-}
-.Reg__Log--Modal__info--SignUp{
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    color: gray;
-}
-.Reg__Log--Modal__info--SignUp:hover{
     color: black;
 }

@@ -30,7 +30,7 @@ function MainMenu() {
                   <button className="Main__Menu--btn">WOMEN</button>
                 </Link>
                 <button className="Main__Menu--btn">COMBOS</button>
-                <button className="Main__Menu--btn">JOGGERS</button>
+                <button className="Main__Menu--btn">JEANS</button>
                 <button className="Main__Menu--btn">SHOP THE LOOK</button>
                 <button className="Main__Menu--btn">SHOP BY COLLECTION</button>
               </div>
