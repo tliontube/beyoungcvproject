@@ -2,7 +2,6 @@ import "../styles/App.css";
 import React, { useState } from "react";
 import Nav from "./NavigationBar/Nav";
 import Footer from "../components/HomePage/Footer/Footer";
-import Search from "./NavigationBar/MainMenu/Search/search";
 // import SearchResult from "./HomePage/SearchResult/SearchResult";
 
 function App() {
