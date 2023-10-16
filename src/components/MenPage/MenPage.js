@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MenPage.css";
+import 'animate.css';
+import { Link } from "react-router-dom";
 function ManPage() {
   const [results, setResults] = useState([]); // Use state to store the results
   const projectId = "f104bi07c490";
@@ -29,23 +31,36 @@ function ManPage() {
   }, []); // Ensure the useEffect runs only once
 
   return (
-    <section className="ManPage__Parent--section">
-      <section className="ManPage__Result--section">
+    <section className="SearchPage__Parent--section">
+      <section className="SearchPage__Result--section">
         {results.map((result, index) => (
-          <div className="ManPage__Content--section" key={index}>
+          <div
+            className="SearchPage__Content--section animate__animated animate__bounceInUp"
+            key={index}
+          >
             <section className="ManPage--img__section">
+            <Link to="/productreview">
               <img
-                className="ManPage_Result--img"
+                className="SearchPage--img__section"
                 src={result.displayImage}
                 alt={result.name}
               />
+              </Link>
             </section>
-            <section className="ManPage_Result--product_info--section">
-              <h3>{result.name}</h3>
-              <p>{result.subCategory}</p>
-              <h3>
-                <span className="Man__Price">Rs : {result.price}</span>
-              </h3>
+            <section className="SearchPage_Result--product_info--section">
+              <section className="SearchPage_Result--name">
+                <Link to="/productreview">
+                  <h3 className="Search__name--h3">{result.name}</h3>
+                </Link>
+              </section>
+              <section className="SearchPage_Result--price__favourite">
+                <h3 className="Search__Price--h3">
+                  <span className="Search__Price"> &#8377; {result.price}</span>
+                </h3>
+                <span class="material-symbols-outlined favourite">
+                  favorite
+                </span>
+              </section>
             </section>
           </div>
         ))}

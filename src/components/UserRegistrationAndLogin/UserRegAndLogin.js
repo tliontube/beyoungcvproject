@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./UserRegAndLogin1.css";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import Signup from "./SignUp/SignUp";
+import { useAuth } from "../Context/context";
+import { useNavigate,Link} from "react-router-dom";
+
 
 function UserRegAndLogin() {
   const [closeModal, setCloseModal] = useState(false);
   const [mail, setMail] = useState("");
   const [password, setPassWord] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
   const projectId = "f104bi07c490";
-  const [errorMessage, setErrorMessage] = useState(""); // Added for error handling
+  const [errorMessage, setErrorMessage] = useState(null); // Added for error handling
+  const navigate = useNavigate();
+  const {login, logout,isLoggedIn} = useAuth();
+  const data = useAuth();
+  console.log(data);
 
   function handleMailChange(e) {
     const mailSet = e.target.value;
@@ -21,6 +27,7 @@ function UserRegAndLogin() {
   }
 
   async function handleLoginClick() {
+    setErrorMessage(null);
     try {
       const response = await fetch(
         "https://academics.newtonschool.co/api/v1/user/login",
@@ -38,9 +45,13 @@ function UserRegAndLogin() {
         }
       );
       if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("token", data.token);
         console.log("successfully login");
-        // Redirect or display a success message
-      } else {
+        login();
+        navigate("/");
+      } else if (response.status === 401) {
+        console.log(response.status);
         const errorData = await response.json();
         setErrorMessage(errorData.message); // Example error handling
       }
@@ -73,9 +84,7 @@ function UserRegAndLogin() {
         </div>
         <div className="Reg__Log--Modal__info--parent">
           <div className="Reg__Log--Modal__info--child">
-            <h3 className="h3Text">
-              Login <span>or</span> Signup
-            </h3>
+            <h3 className="h3Text">Login</h3>
             <p className="pText">Get Exciting Offers & Track Order</p>
           </div>
           <div className="Reg__Log--Modal__info--input__button--Parent">
@@ -97,23 +106,27 @@ function UserRegAndLogin() {
               className="Reg__Log--Modal__info--button"
               onClick={handleLoginClick}
             >
-              LogIn
+              Login
             </button>
+
             <Link to="/SignUp">
               <a className="Reg__Log--Modal__info--SignUp">Signup</a>
             </Link>
           </div>
-          <a className="Reg__Log--Modal__info--Continueasguest" href="#">
-            Forgot Password?
-          </a>
-          {errorMessage && (
-            <div className="error-message">{errorMessage}</div>
-          )}
+          <Link to="/ForgotPassword">
+            <a className="Reg__Log--Modal__info--Continueasguest">
+              Forgot Password?
+            </a>
+          </Link>
+          {/* {errorMessage && (
+            alert(errorMessage)
+          )} */}
         </div>
       </section>
-      <Routes>
+      {/* <Routes>
         <Route path="/SignUp" element={<Signup />} />
-      </Routes>
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
+      </Routes> */}
     </section>
   );
 }

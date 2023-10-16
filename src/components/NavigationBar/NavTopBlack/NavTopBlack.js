@@ -1,39 +1,56 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Routes,
-  NavLink,
-} from "react-router-dom";
-import UserRegAndLogin from "../../UserRegistrationAndLogin/UserRegAndLogin";
-import SignUp from "../../UserRegistrationAndLogin/SignUp/SignUp"
+import { useAuth } from "../../Context/context";
+import { Link } from "react-router-dom";
 import "./NavTopBlack.css";
 function NavTopBlack() {
+  const { login, logout, isLoggedIn } = useAuth();
+  const handleLoginLogout = () => {
+    if (isLoggedIn) {
+      logout();
+    }
+  };
   return (
-    <Router>
-      <div className="Nav__Parent--width">
-        <section className="Nav__Child--1">
-          <div className="Track__section">
-            <span class="material-symbols-outlined">location_on</span>
-            <button className="nav__btn">Track Order</button>
-          </div>
-          <div className="login--signup__section">
-            <Link to="/Login">
-              <button className="nav__btn">Login</button>
-            </Link>
-            <span>|</span>
-            <Link to="/SignUp">
-              <button className="nav__btn">SignUp</button>
-            </Link>
-          </div>
-        </section>
-      </div>
-      <Routes>
-        <Route path="/Login" element={<UserRegAndLogin/>}/>
-        <Route path="/SignUp" element={<SignUp/>}/>
-      </Routes>
-    </Router>
+    <div className="Nav__Parent--width">
+      <section className="Nav__Child--1">
+        <div className="Track__section">
+          <span class="material-symbols-outlined">location_on</span>
+          <button className="nav__btn">Track Order</button>
+        </div>
+        <div className="login--signup__section">
+          {isLoggedIn ? <div>
+            <Link to="/profile">
+                <button className="nav__btn">
+                  My Account
+                </button>
+              </Link>
+              <Link to="/Login">
+                <button onClick={handleLoginLogout} className="nav__btn">
+                  {isLoggedIn ? "Logout" : "Login"}
+                </button>
+              </Link>
+          </div> :
+            <div>
+              <Link to="/Login">
+                <button onClick={handleLoginLogout} className="nav__btn">
+                  {isLoggedIn ? "Logout" : "Login"}
+                </button>
+              </Link>
+              <span>{isLoggedIn ? "" : "|"}</span>
+              <Link to="/SignUp">
+                <button className="nav__btn">
+                  {isLoggedIn ? "" : "SignUp"}
+                </button>
+              </Link>
+              <Link to="/ForgotPassword">
+                <button className="nav__btn ForgotPassWord">
+                  ForgotPassword
+                </button>
+              </Link>
+            </div>
+          }
+        </div>
+      </section>
+    </div>
   );
 }
 export default NavTopBlack;

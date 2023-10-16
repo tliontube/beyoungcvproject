@@ -8,9 +8,21 @@ import LazyStrip from "./LazyStrip/LazyStrip";
 import CatagoriesForMan from "./CatagoriesForMan/CatagoriesForMan";
 import CatagoriesForWomen from "./CatagoriesForWomen/CatagoriesForWomen";
 import MainStrip from "./MainStrip/MainStrip";
+import { useEffect } from "react";
+import { useAuth } from "../Context/context";
 
 
 function HomePage() {
+  const { login } = useAuth();
+  useEffect(() => {
+    // Check local storage for the token on page load
+    const token = localStorage.getItem("token");
+    console.log(token)
+    if (token) {
+      // If a token exists, the user is logged in
+      login();
+    }
+  }, []);
   return (
     <div>
       <HomePageSlider />

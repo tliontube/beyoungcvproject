@@ -10,9 +10,9 @@ function HomePageSlider() {
     return () => clearInterval(intervalId);
   }, []);
 
-  function handleClick() {
-    setSlide((prevSlide) => !prevSlide);
-  }
+  // function handleClick() {
+  //   setSlide((prevSlide) => !prevSlide);
+  // }
   return (
     <section className="Home__Page--slider">
       <section className="My__Slide--section">
@@ -29,7 +29,7 @@ function HomePageSlider() {
           />
         </div>
       </section>
-      <section>
+      {/* <section>
         <span
           id={slide && "dark_dot"}
           className="dot"
@@ -40,7 +40,7 @@ function HomePageSlider() {
           className="dot"
           onClick={handleClick}
         ></span>
-      </section>
+      </section> */}
     </section>
   );
 }

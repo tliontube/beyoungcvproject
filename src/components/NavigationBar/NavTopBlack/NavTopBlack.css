@@ -29,3 +29,7 @@
 span{
     color: white;
 }
+.ForgotPassWord{
+    color: black;
+    display: none;
+}
