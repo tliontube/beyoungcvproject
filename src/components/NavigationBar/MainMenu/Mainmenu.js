@@ -68,14 +68,14 @@ function MainMenu() {
           <div className="Main__Menu--logoItems">
             <input
               className="search__Input"
-              type="text"
+              // type="text"
               placeholder="Search entire store here..."
               value={searchTerm}
               onChange={handleSearch}
             />
             <Link to="/searchResult">
               <span
-                class="material-symbols-outlined search"
+                className="material-symbols-outlined search"
                 onClick={() => fetchData(searchTerm)}
               >
                 search
