@@ -81,10 +81,14 @@ function MainMenu() {
                 search
               </span>
             </Link>
+            <Link to="/wish">
             <span class="material-symbols-outlined favourite">favorite</span>
+            </Link>
+            <Link to="/cart">
             <span class="material-symbols-outlined shoppingCart">
               shopping_cart
             </span>
+            </Link>
           </div>
         </section>
       </section>

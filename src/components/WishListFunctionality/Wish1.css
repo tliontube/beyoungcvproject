@@ -1,0 +1,23 @@
+.WishList__Parent--section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.WishList__Result--section{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.WishList__Content--section{
+    width: 200px;
+    height: 480px;
+}
+.WishList--img__section{
+    width: 100%;
+}
+.WishList__name--h3{
+    margin-top: 0px;
+}

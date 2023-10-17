@@ -8,11 +8,10 @@ function UserRegAndLogin() {
   const [closeModal, setCloseModal] = useState(false);
   const [mail, setMail] = useState("");
   const [password, setPassWord] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
   const projectId = "f104bi07c490";
-  const [errorMessage, setErrorMessage] = useState(null); // Added for error handling
+  const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
-  const {login, logout,isLoggedIn} = useAuth();
+  const {login} = useAuth();
   const data = useAuth();
   console.log(data);
 
@@ -34,7 +33,7 @@ function UserRegAndLogin() {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/json", // Added Content-Type
+            "Content-Type": "application/json",
             projectID: projectId,
           },
           body: JSON.stringify({

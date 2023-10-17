@@ -17,21 +17,22 @@ function NavTopBlack() {
           <button className="nav__btn">Track Order</button>
         </div>
         <div className="login--signup__section">
-          {isLoggedIn ? <div>
-            <Link to="/profile">
-                <button className="nav__btn">
-                  My Account
-                </button>
+          {isLoggedIn ? (
+            <div>
+              <Link to="/profile">
+                <button className="nav__btn">My Account</button>
               </Link>
+              {/* <span>|</span>
               <Link to="/Login">
                 <button onClick={handleLoginLogout} className="nav__btn">
                   {isLoggedIn ? "Logout" : "Login"}
                 </button>
-              </Link>
-          </div> :
+              </Link> */}
+            </div>
+          ) : (
             <div>
               <Link to="/Login">
-                <button onClick={handleLoginLogout} className="nav__btn">
+                <button className="nav__btn">
                   {isLoggedIn ? "Logout" : "Login"}
                 </button>
               </Link>
@@ -47,7 +48,7 @@ function NavTopBlack() {
                 </button>
               </Link>
             </div>
-          }
+          )}
         </div>
       </section>
     </div>

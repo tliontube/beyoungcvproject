@@ -14,10 +14,14 @@ import Nav from "../../NavigationBar/Nav";
 import Footer from "../../HomePage/Footer/Footer"
 import ProductDetailsAndReview from "../../ProductDetailsAndReview/ProductDetailsAndReview";
 import UserAccountAndProfileSettings from "../../UserAccountAndProfileSettings/UserAccountsAndProfile";
+import Wish from "../../WishListFunctionality/Wish";
+import Kart from "../../Kart/Kart";
 import { useEffect } from "react";
 import { useAuth } from "../../Context/context";
+
+
 const Router = () => {
-  const { login } = useAuth();
+  const { login,logout} = useAuth();
   useEffect(() => {
     // Check local storage for the token on page load
     const token = localStorage.getItem("token");
@@ -25,8 +29,11 @@ const Router = () => {
     if (token) {
       // If a token exists, the user is logged in
       login();
+    }else{
+      logout();
     }
   }, []);
+  
   return (
     <BrowserRouter>
       <Nav />
@@ -43,6 +50,8 @@ const Router = () => {
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
         <Route path="/productreview" element={<ProductDetailsAndReview/>}/>
         <Route path="/profile" element={<UserAccountAndProfileSettings/>}/>
+        <Route path="/wish" element={<Wish/>}/>
+        <Route path="/cart" element={<Kart/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

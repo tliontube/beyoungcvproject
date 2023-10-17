@@ -28,7 +28,7 @@ function ForgotPassword() {
     setErrorMessage(null);
     try {
       const response = await fetch(
-        "https://academics.newtonschool.co/api/v1/user/signup",
+        "https://academics.newtonschool.co/api/v1/user/forgotPassword",
         {
           method: "POST",
           headers: {

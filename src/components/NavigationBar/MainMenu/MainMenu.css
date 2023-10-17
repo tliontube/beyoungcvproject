@@ -21,6 +21,7 @@
     border-radius: 10px;
     position: relative;
     left: 10px;
+    width: 15em;
 }
 .search{
     font-weight: bolder;
