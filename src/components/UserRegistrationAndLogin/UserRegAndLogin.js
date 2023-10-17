@@ -53,7 +53,7 @@ function UserRegAndLogin() {
       } else if (response.status === 401) {
         console.log(response.status);
         const errorData = await response.json();
-        setErrorMessage(errorData.message); // Example error handling
+        setErrorMessage(errorData.message);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -69,7 +69,7 @@ function UserRegAndLogin() {
       <section className="Reg__Log--Modal">
         <div className="Reg__Log--Modal--img__div">
           <span
-            className="material-symbols-outlined reg__Close--btn" // Use className
+            className="material-symbols-outlined reg__Close--btn"
             onClick={() => {
               setCloseModal(true);
             }}
@@ -118,15 +118,8 @@ function UserRegAndLogin() {
               Forgot Password?
             </a>
           </Link>
-          {/* {errorMessage && (
-            alert(errorMessage)
-          )} */}
         </div>
       </section>
-      {/* <Routes>
-        <Route path="/SignUp" element={<Signup />} />
-        <Route path="/ForgotPassword" element={<ForgotPassword />} />
-      </Routes> */}
     </section>
   );
 }
